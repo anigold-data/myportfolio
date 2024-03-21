@@ -1,0 +1,224 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ANIWURA OPEYEMI KEHINDE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/fruits.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 id="title">Aniwura Opeyemi</h1>
+							<p>Data Analyst/Digital Products Manager</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="index.html" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="index.html" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="index.html" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="fruits" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt"><strong>Image Classification - Fruits</strong></h2><br />
+								<p> <strong> Image Classification Model using deep CNN (Alexnet) </strong><br />
+								</p>
+								<a href = "https://github.com/anigold-data/Portfolio-Projects/tree/main/Fruits%20Classification">View Resources</a>
+								
+							</header>
+						</div>
+					</section>
+
+				<!-- Image Classification -->
+					<section id="fruits">
+						<div class="container">
+                            <h2>Image Classification</h2>
+                            <p>In today's digital era, image classification using deep convolutional neural networks (CNNs) has become a powerful tool for various applications, 
+                                including object recognition and classification. This study utilizes AlexNet, a deep CNN architecture consisting of multiple layers of convolutional 
+                                and pooling operations, coupled with its ability to capture intricate features within images, making it well-suited for the task of fruit classification. 
+                                Through extensive training on a dataset comprising diverse images of fruits, the aim is to leverage AlexNet's capabilities to accurately classify fruits into 
+                                distinct categories.</p>
+                        
+                            <h2>Data Gathering</h2>
+                            <p>Gathering a diverse and comprehensive dataset of fruit images is crucial for training a robust classification model and it also tends to reduce the possibility 
+                                of model overfitting. The dataset consists of 8 classes of fruit types with each class containing 2100 images for model training, and 103 images for model testing, 
+                                this was done to avoid biases in the model. The images were scraped from several online repositories and the fruit types/classes include Strawberries, Oranges, 
+                                Bananas, Mangoes, Pineapples, Grapes, Apples, and Watermelon.</p>
+                        
+                            <h2>Data Preprocessing and Augmentation</h2>
+                            <p>The preprocessing steps undertaken were necessary to ensure the consistency and suitability of the dataset for training. The steps taken are highlighted below:</p>
+                        
+                            <ol>
+                                <li>
+                                    <strong>Image resizing:</strong> As required by the model’s structural specifications the images were resized to suit the demands of AlexNet to prevent errors 
+                                    during training and evaluation. The default input size is 227 x 227.
+                                </li>
+                                <li>
+                                    <strong>Cross-validation:</strong> To increase the robustness of the dataset, a 5-fold cross-validation was used to split the data into training and 
+                                    validation sets. The use of the k-fold cross-validation holds several advantages because dividing the dataset into 5 distinct folds facilitates 5 iterations of 
+                                    training and accompanying validation. Each iteration includes a distinct combination of training and validation sets, allowing for a thorough evaluation of how 
+                                    effectively the models generalize to various data samples.
+                                </li>
+                                <li>
+                                    <strong>Data augmentation:</strong> In this stage, several preprocessing activities were implemented to increase the variety and diversity of the dataset. 
+                                    These augmentations were critical in increasing the model's capacity to generalize and generate accurate predictions. Different types and degrees of augmentation 
+                                    were used for the training, validation, and test datasets. This approach is a common and appropriate practice in deep learning because augmenting the training 
+                                    dataset with different transformations helps expose the models to a wider range of data variations. For the training dataset, the augmentations carried out include:
+                                    <ul>
+                                        <li>Random Horizontal Flip: Horizontal flipping was introduced with a 50% probability. This procedure rotates photos horizontally at random, diversifying 
+                                            the dataset and reducing orientation bias.</li>
+                                        <li>Random Rotation (±20 degrees): To simulate different camera angles and head positions, random rotation within the range of 20 degrees was used.</li>
+                                        <li>Color Jitter: Color jitter techniques were used, including brightness, contrast, saturation, and hue modifications (with a maximum delta of 0.1). 
+                                            These modifications were made to imitate changes in lighting and camera settings.</li>
+                                        <li>Random Grayscale (20% probability): Images were subjected to random grayscale conversion with a probability of 20%. This operation was done to temporarily 
+                                            remove color information and reintroduce variability.</li>
+                                        <li>Gaussian Blur: Smoothness and blur were introduced using Gaussian blur with a kernel size of 5 pixels, simulating genuine image quality changes.</li>
+                                        <li>Conversion to Tensor and Normalization: Finally, the images were transformed to tensors and normalized. This procedure ensures that pixel values fall 
+                                            inside a predefined range, which is a prerequisite for effective model training.</li>
+                                    </ul>
+                                    For the Test and Validation set augmentation, no augmentation was carried out to simulate real-life scenarios.
+                                </li>
+                            </ol>
+                            <figure>
+									<img src="images/fruits_python.JPG" alt="Snapshot of the dataset">
+									<figcaption>Dataset Augmentation in Python</figcaption>
+							</figure> 
+                            <h2>Model Selection</h2>
+                            <p>AlexNet, as a deep CNN architecture, is chosen for its proven effectiveness in image classification tasks. It consists of multiple convolutional layers followed 
+                                by pooling layers and fully connected layers, culminating in softmax classification for output. The architecture's depth and complexity enable it to capture intricate 
+                                features within images, making it well-suited for fruit classification.</p>
+                        
+                            <h2>Model Training</h2>
+                            <p>The implementation was carried out in Python using the PyTorch library, with substantial experimentation using various hyperparameters. Specific procedures were done 
+                                after loading the pre-trained model to customize the model architecture. The upper layers were frozen immediately after loading the pretrained model to ensure that the 
+                                weights of these levels were fixed, with only the last layers fine-tuned to reflect the number of classes (8) required for the exercise. Here's a breakdown of the 
+                                hyperparameter tuning process and the decisions made:</p>
+                            <ul>
+                                <li><strong>Number of Epochs:</strong> Given the magnitude of the dataset and the requirement to avoid overfitting, a value of 10 epochs was chosen for model training. 
+                                    This option allowed the model to learn from the data without overfitting to noise.</li>
+                                <li><strong>Loss Function and Optimizer:</strong> The cross-entropy loss function and the SGD optimizer emerged as the best choices for the task after extensive testing 
+                                    and hyperparameter optimization. Its adjustable learning rate and momentum methods aided in the model's efficient convergence.</li>
+                                <li><strong>Batch Size:</strong> A batch size of 32 was selected as it strikes a balance between efficient model convergence and data usage.</li>
+                            </ul>
+                            <figure>
+                                <img src="images/fruits_fold.JPG" alt="Snapshot of the dataset">
+                                <figcaption>AlexNet Model Training</figcaption>
+                            </figure> 
+                            <h2>Model Evaluation</h2>
+                            <p>During the model evaluation phase, several metrics were utilized to assess the performance of the trained AlexNet model. Firstly, both training and validation accuracies 
+                                were computed to gauge how well the model learned to classify fruit images during the training process. The training accuracy reflects the model's performance on the training 
+                                dataset, while the validation accuracy provides insights into its generalization ability on unseen data. Furthermore, the confusion matrix was generated by evaluating the 
+                                model's predictions on the test dataset. The confusion matrix offers a detailed breakdown of the model's classification performance, showing the number of correct and 
+                                incorrect predictions for each class. By analyzing the confusion matrix, we can identify any patterns of misclassification and gain insights into which classes may be more 
+                                challenging for the model to distinguish.</p>
+                        
+                            <h2>Results</h2>
+                            <p>The table below displays the accuracies achieved for each fold during the cross-validation process:</p>
+                            <table>
+                                <tr>
+                                    <th>Model</th>
+                                    <th>Accuracy</th>
+                                </tr>
+                                <tr>
+                                    <td>Fold 1</td>
+                                    <td>0.8536</td>
+                                </tr>
+                                <tr>
+                                    <td>Fold 2</td>
+                                    <td>0.8940</td>
+                                </tr>
+                                <tr>
+                                    <td>Fold 3</td>
+                                    <td>0.9036</td>
+                                </tr>
+                                <tr>
+                                    <td>Fold 4</td>
+                                    <td>0.9182</td>
+                                </tr>
+                                <tr>
+                                    <td>Fold 5</td>
+                                    <td>0.9220</td>
+                                </tr>
+                            </table>
+                            <p>These results indicate that Fold 5 achieved the highest accuracy of 0.9220 (92.2%), making it the top-performing model among all folds. The consistent improvement in accuracy 
+                                across folds demonstrates the training process's effectiveness and the model's robustness in classifying fruit images. Therefore, Fold 5 emerges as the most promising 
+                                candidate for the image classification task, with its superior performance suggesting its suitability for deployment in practical applications.</p>
+                        
+                            <h2>Image Classification (Class Prediction)</h2>
+                            <p>After identifying Fold 5 as the top-performing model, it was saved for further analysis. Subsequently, a custom function was defined to instantiate the AlexNet model, 
+                                facilitating the seamless loading of the saved model. This enabled the efficient execution of class predictions on sample images by feeding them into the saved model.</p>
+                            <figure>
+                                <img src="images/fruits_predict.JPG" alt="Snapshot of the dataset">
+                                <figcaption>Fruit Image Classification</figcaption>
+                            </figure>
+                            <p>In conclusion, this task provides a simplistic approach to image classification leveraging deep CNN models. While the results of this task may seem promising, it should 
+                                be noted that several metrics such as Precision, Specificity, F1 scores, and Recall are needed to ultimately assess the performances of the model. In addition, depending 
+                                on the magnitude of the dataset, extensive model fine-tuning and the addition of layers such as Normalization and Flattening layers might be needed to increase the 
+                                complexity of the model which in turn helps capture more intricate features needed for accurate classification.</p>
+                                                  
+                        </div>    
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.twitter.com" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/anigold-data" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://linkedin.com/in/opeyemi-aniwura-868235170" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:aniwurakehinde@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy; All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

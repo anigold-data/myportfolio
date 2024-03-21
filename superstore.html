@@ -1,0 +1,162 @@
+<!DOCTYPE HTML>
+<!--
+	Prologue by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>ANIWURA OPEYEMI KEHINDE</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/article.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<div id="header">
+
+				<div class="top">
+
+					<!-- Logo -->
+						<div id="logo">
+							<span class="image avatar48"><img src="images/avatar.jpg" alt="" /></span>
+							<h1 id="title">Aniwura Opeyemi</h1>
+							<p>Data Analyst/Digital Products Manager</p>
+						</div>
+
+					<!-- Nav -->
+						<nav id="nav">
+							<ul>
+								<li><a href="index.html" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
+								<li><a href="index.html" id="portfolio-link"><span class="icon solid fa-th">Portfolio</span></a></li>
+								<li><a href="index.html" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
+								<li><a href="index.html" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
+							</ul>
+						</nav>
+
+				</div>
+
+				
+
+			</div>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- Intro -->
+					<section id="superstore" class="one dark cover">
+						<div class="container">
+
+							<header>
+								<h2 class="alt"><strong>Superstore Dashboard</strong></h2><br />
+								<p>This Analytics was processed using the Power BI Suite. <br />
+									Click below to view the published dashboard on Power BI.
+								</p>
+								<a href = "https://app.powerbi.com/groups/me/reports/d498d994-23a8-4d6e-8832-fa6445bab6b6?ctid=6295c686-eda2-4d2c-9588-3a3b9810850f&pbi_source=linkShare">View Dashboard</a>
+								
+							</header>
+						</div>
+					</section>
+
+				<!-- Superstore Dashboard -->
+					<section id="superstore">
+						<div class="container">
+
+							<!-- <header>
+								<h2>Superstore Dashboard</h2>
+							</header> -->
+							<div class="write-up">
+								<h3>The Problem Objective:</h3>
+								<p>The primary goal is to develop an interactive dashboard leveraging historical sales data extracted from the Superstore dataset,
+									thereafter actionable insights that can facilitate informed decision-making processes can then be extracted.</p>
+					
+								<h3>Data Collection:</h3>
+								<p>The data was sourced from an open-access platform, specifically from <a href="https://www.kaggle.com/datasets/addhyay/superstore-dataset/code">Kaggle</a>. 
+									This dataset consists of a multitude of fields, providing comprehensive information on various aspects including sales transactions, unique order identifiers, 
+									dates of order placement and shipping, shipping modes, customer demographics, store locations, product details, and transactional financials.
+								<figure>
+									<img src="images/superstore-excel.JPG" alt="Snapshot of the dataset">
+									<figcaption>Overview of the dataset</figcaption>
+								</figure>
+								<h3>Data Cleaning and Preparation:</h3>
+								<p>During the initial phase of data preprocessing, a thorough examination was conducted to detect any potential missing values and outliers within the dataset. 
+									Subsequently, a check on the data types was carried out to ensure uniformity and consistency, aligning each field with its intended representation of sales-related information. 
+									Additionally, an additional column titled "Order Processing Time" was calculated, indicating the duration in days between order placement and order fulfilment/shipping. 
+									However, this data transformation uncovered certain irregularities within the dataset, notably instances where order dates preceded shipping dates, 
+									leading to negative values within the order processing time field.</p>
+					
+								<h3>Exploratory Data Analysis:</h3>
+								<p>In preparation for dashboard development, several key measures essential for crafting meaningful visuals were derived. These measures included:</p>
+								<ol>
+									<li>Annual Profit Growth Rate: This measure facilitated the calculation of profit growth rates between financial years (2019 and 2020).</li>
+									<li>Annual Sales Growth Rate: This measure aided in calculating the gross sales growth rates between financial years.</li>
+									<li>Unique Orders: This measure was pivotal in identifying the total number of unique transactions recorded in the dataset.</li>
+									<li>Total Profit: This measure encapsulates the aggregated profit recorded in the dataset.</li>
+								</ol>
+					
+								<h3>Dashboard Design and Development:</h3>
+								<p>The dashboard's layout was thoroughly structured, with significant Key Performance Indicators (KPIs) such as Total Sales, Total Profit, Profit Growth Rate, 
+									and Sales Growth Rate strategically positioned. The dashboard also contained various vital visualizations, including:</p>
+								<ol>
+									<li>Profit Area Curve: This visualization presents the trend of monthly, quarterly, and yearly profit generation.</li>
+									<li>Waterfall Visual: This visualization illustrates the profit contribution from each product subcategory, aiding in the identification of profitable products.</li>
+									<li>Product Line Curve: This visual aggregates the units sold for respective product subcategories across recorded financial years.</li>
+									<li>Shipping Doughnut Chart: This visualization segregates the distribution of shipping modes for transactions, facilitating the identification of customers' preferred shipping modes.</li>
+									<li>Filled Map Visuals: Sales volumes for each state are represented by bubbles, with the bubble sizes further indicating sales magnitude.</li>
+									<li>Scatter Plot: This plot displays the average order processing time for shipping modes recorded in the dataset.</li>
+								</ol>
+								
+								<figure>
+									<img src="images/superstore_dashoard.jpg" alt="dataset dashboard">
+									<figcaption>Superstore Dashoard</figcaption>
+								</figure>
+								
+								<p>Additionally, slicers were incorporated into the dashboard to enable users to drill down further into various factors such as location, date, product type, and category, 
+									enhancing the dashboard's interactivity and usability. This level of interactivity not only improves usability but also empowers users to extract deeper insights from the data, 
+									enabling more informed decision-making processes.</p>
+								<p>In addition to the approach outlined above, the aesthetic and precise arrangement of the tiles on the dashboard plays a crucial role in enhancing the overall user experience and effectiveness of the dashboard. 
+									The careful arrangement of tiles ensures that important Key Performance Indicators (KPIs) and visualizations are prominently displayed, allowing users to quickly grasp the most critical information at a glance. 
+									By strategically positioning KPIs such as total sales, total profit, profit growth rate, and sales growth rate, users can immediately assess the overall performance of the organization and track key metrics over time. 
+									Overall, the layout of tiles on the dashboard not only enhances the visual appeal of the dashboard but also improves usability and effectiveness.
+								</p>
+								<p>In essence, the comprehensive dashboard design and development process outlined above illustrate a holistic approach towards leveraging data-driven insights to drive business success.
+								</p>
+							</div>    
+                        </div>    
+					</section>
+			</div>
+
+		<!-- Footer -->
+			<div id="footer">
+				<div class="bottom">
+
+					<!-- Social Icons -->
+						<ul class="icons">
+							<li><a href="https://www.twitter.com" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="https://www.facebook.com" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="https://github.com/anigold-data" class="icon brands fa-github"><span class="label">Github</span></a></li>
+							<li><a href="https://linkedin.com/in/opeyemi-aniwura-868235170" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+							<li><a href="mailto:aniwurakehinde@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+
+				</div>
+
+				<!-- Copyright -->
+					<ul class="copyright">
+						<li>&copy;All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
